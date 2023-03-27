@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="./assets/js/script.js" defer></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Adivinhe o Número</title>
+</head>
+
+<body onload="init()">
+
+
+  <main>
+    <div id="welcomeScreen">
+      <h2>Adivinhe o Número <br/> 1 - 100</h2>
+    </div>
+
+    <div id="gameArea">
+      <section>
+        <h3 id="textOutput">Suas tentativas:</h3>
+        <input type="number" id="inputBox" min="1" max="100" onchange="compareNumbers()" />
+      </section>
+
+
+      <section class="stats">
+        <div class="info">
+          <p>Número de Tentativas:</p>
+          <span class="colorGuesses" id="attempts"></span>
+        </div>
+
+        <div class="info">
+          <p>Seus Palpites:</p>
+          <span class="colorGuesses" id="guesses"></span>
+        </div>
+
+      </section>
+
+
+      <button id="newGameButton" onclick="newGame()">NOVO JOGO</button>
+    </div>
+  </main>
+  
+</body>
+
+</html>
